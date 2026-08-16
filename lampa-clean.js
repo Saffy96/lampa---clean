@@ -2,7 +2,8 @@
   'use strict';
 
   const NAME = 'Lampa Clean';
-  const VERSION = '0.1.0';
+  const VERSION = '0.1.1';
+  const Lampa = window.Lampa;
 
   if (window.__LAMPA_CLEAN_LOADED__) return;
   window.__LAMPA_CLEAN_LOADED__ = true;
@@ -233,6 +234,8 @@
   }
 
   function start() {
+    if (Lampa && Lampa.Storage) log('Lampa API detected');
+
     if (!settings.enabled) {
       exposeApi();
       console.log(`[${NAME}] loaded, disabled`);
