@@ -8,15 +8,23 @@ Lampa Clean пропускает preroll-рекламу перед запуск�
 
 ## Установка
 
-Добавьте в Lampa постоянную ссылку:
+Добавьте в Lampa основной URL:
 
-`https://saffy96.github.io/lampa---clean/plugin.js`
+`https://cdn.jsdelivr.net/gh/Saffy96/lampa---clean@main/c.js`
 
 Путь в Lampa:
 
 `Настройки → Расширения → Добавить плагин`
 
 После добавления проверка должна показать `200`.
+
+### Резервный URL
+
+Если CDN временно недоступен:
+
+`https://saffy96.github.io/lampa---clean/c.js`
+
+На некоторых устройствах или у некоторых провайдеров `github.io` может быть недоступен, поэтому jsDelivr используется как основной способ установки.
 
 ## Как это работает
 
@@ -36,7 +44,7 @@ Lampa Clean не гарантирует блокировку рекламы, к�
 
 ## Обновления
 
-Используйте постоянный URL `plugin.js`. Новые совместимые версии можно публиковать по этому адресу без необходимости менять ссылку в Lampa.
+Основной URL использует ветку `main`, поэтому совместимые обновления публикуются по тому же адресу без необходимости менять ссылку в Lampa. CDN может кэшировать изменения, поэтому обновление может появляться не мгновенно.
 
 История изменений: [CHANGELOG.md](CHANGELOG.md)
 
@@ -44,11 +52,15 @@ Lampa Clean не гарантирует блокировку рекламы, к�
 
 **Lampa Clean** is a lightweight plugin that skips Lampa's built-in preroll before normal video playback. It does not provide movies, streams, or content sources.
 
-Install URL:
+Primary install URL:
 
-`https://saffy96.github.io/lampa---clean/plugin.js`
+`https://cdn.jsdelivr.net/gh/Saffy96/lampa---clean@main/c.js`
 
-Open Lampa → Settings → Extensions → Add plugin, paste the URL and restart Lampa if needed.
+Fallback URL:
+
+`https://saffy96.github.io/lampa---clean/c.js`
+
+Open Lampa → Settings → Extensions → Add plugin, paste the primary URL and restart Lampa if needed.
 
 ## License
 
